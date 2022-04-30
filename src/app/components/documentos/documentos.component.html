@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">nombre</th>
+      <th scope="col">tipo</th>
+      <th scope="col">fecha registro</th>
+      <th scope="col">ruta</th>
+      <th scope="col">id empleado</th>
+      <th scope="col">id cliente</th>
+     
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let documento of documentos; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ documento.nombre }}</td>
+      <td>{{ documento.tipo }}</td>
+      <td>{{ documento.fechaRegistro }}</td>
+      <td>{{ documento.ruta }}</td>
+      <td>{{ documento.empleado }}</td>
+      <td>{{ documento.cliente }}</td>
+    </tr>
+    </tbody>
+  </table>
