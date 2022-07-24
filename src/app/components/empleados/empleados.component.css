@@ -11,20 +11,38 @@ button{
     margin: 20px;
     background-color: #118b30;
     color: aliceblue;
+     
 }
 button:hover{
-    background-color:  #021d06;
+    background-color: #021d06;
+    
 }
-
+.tabla{
+    margin: 20px;
+}
+thead{
+    background-color: #a6f7b3;
+}
 .Buscar{
     width: 200px;
     height: 35px;
     padding-left: 10px;
     border: solid 1px;
     border-radius: 10px;
-    outline-offset: 2px ;
-    outline: green  ;
+    
+    border: solid 0px;
+    box-shadow: 2px 4px 5px 3px rgba(0, 0, 0, 0.50);
+    outline: none;
+     
 }
-h1{
+.buscar:hover{
+  box-shadow: 0 0 5px  rgb(3, 248, 64);
+}
+i{
+    margin-right: 9px;
     font-size: 20px;
+    border: none;
+}
+i:hover{
+    box-shadow: 0 0 5px rgb(19, 19, 121);
 }

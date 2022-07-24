@@ -14,8 +14,14 @@ button{
 }
 button:hover{
     background-color:  #021d06;
+    
 }
-
+.tabla{
+    margin: 20px;
+}
+thead{
+    background-color: #a6f7b3;
+}
 .Buscar{
     width: 200px;
     height: 35px;
@@ -24,7 +30,13 @@ button:hover{
     border-radius: 10px;
     outline-offset: 2px ;
     outline: green  ;
+
 }
-h1{
+i{
+    margin-right: 9px;
     font-size: 20px;
+    border: none;
+}
+i:hover{
+    box-shadow: 0 0 5px rgb(19, 19, 121);
 }

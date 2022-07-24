@@ -1,0 +1,46 @@
+.formulario {
+    border-radius: 15px;
+    border-style: ridge;
+    border: solid 1px;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+}
+h1{
+    font-size: 20px;
+}
+
+.arriba{
+    
+    text-align: center;
+}
+.abajo{
+    text-align: center;
+}
+input{
+    margin: 20px;
+    width: 250px;
+    height: 35px;
+    border: solid 1px;
+    border-radius: 5px;
+    padding-left: 7px;
+
+}
+.boton-guardar{
+     width: 150px;
+     height: 35px;
+     margin-top: 10px;
+     background-color: #118b30;
+     border:#118b30 ;
+     color: beige;
+}
+.boton-guardar:hover{
+    background-color:  #a0daa3;
+
+}
+.boton{
+    text-align: center;
+    
+}
