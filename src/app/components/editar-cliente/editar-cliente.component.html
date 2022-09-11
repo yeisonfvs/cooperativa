@@ -1,0 +1,26 @@
+<div class="formulario">
+    <h1>Añadir nuevo Cliente</h1>
+  
+
+   <form action="" class="form1" method="post">
+       
+       <div class="arriba">
+       <input [(ngModel)]="cliente.nombres" type="text" placeholder="Nombres" name="Nombres" required="true" class="tamano1">
+       <input [(ngModel)]="cliente.apellidos" type="text" placeholder="Apellidos" name="Apellidos" required="true" class="tamano1">
+       <input [(ngModel)]="cliente.documento" type="number" placeholder="Documento" name="Documento" required="true" class="tamano1">
+       </div>
+       <div class="abajo">
+         <input [(ngModel)]="cliente.telefono" type="number" placeholder="Telefono" name="Telefono" required="true" class="tamano2">
+       <input [(ngModel)]="cliente.direccion" type="text" placeholder="Direccion" name="Direccion" required="true" class="tamano2">
+       <input [(ngModel)]="cliente.correo" type="text" placeholder="Correo" name="Correo" required="true" class="tamano2">
+       </div>
+       <div class="boton">
+          <input [(ngModel)]="cliente.fecha_vinculacion" type="date" placeholder="Fecha Vinculacion" name="Fecha Vinculacion" required="true" class="tamano2">
+          <input (click)="editar()" type="submit" class="boton-guardar" value="Guardar">
+       </div>
+        
+           
+       
+  
+    </form>
+ </div>

@@ -1,7 +1,7 @@
 <div class="botones">
-    <button><a target="marco-modulos" href="agregarCliente.html" style="text-decoration: none; color: aliceblue;">agregar</a></button>
+    <a class="btn btn-success" routerLink="/clientes/agregar" >agregar</a>
     <input class=" Buscar" type="search" placeholder="Buscar" aria-label="Buscar">
-   </div>
+  </div>
 
    <div class="tabla">
        <table class="table caption-top">
@@ -20,42 +20,21 @@
              </tr>
            </thead>
            <tbody>
-             <tr>
-               <th scope="row">1</th>
-               <td>agenda</td>
-               <td>carta</td>
-               <td>01/02/2022</td>
-               <td>rutaprueba</td>
-               <td>Roberto</td>
-               <td>Maria</td>
-               <td>Maria</td>
-               <td><i class="bi bi-pencil-square"></i><i class="bi bi-trash3-fill"></i></td>
-             </tr>
-             <tr>
-               <th scope="row">2</th>
-               <td>Jacob</td>
-               <td>Thornton</td>
-               <td>@fat</td>
-               <td>@mdo</td>
-               <td>@mdo</td>
-               <td>@mdo</td>
-               <td>Maria</td>
-               <td><i class="bi bi-pencil-square"></i><i class="bi bi-trash3-fill"></i></td>
-             </tr>
-             <tr>
-               <th scope="row">3</th>
-               <td>Larry</td>
-               <td>the Bird</td>
-               <td>@twitter</td>
-               <td>@mdo</td>
-               <td>@mdo</td>
-               <td>@mdo</td>
-               <td>Maria</td>
-               <td><i class="bi bi-pencil-square"></i><i class="bi bi-trash3-fill"></i></td>
-               
-             </tr>
+              
+             <tr *ngFor="let cliente of clientes; index as i">
+               <th scope="row">{{i + 1}}</th>
+               <td>{{cliente.nombres}}</td>
+               <td>{{cliente.apellidos}}</td>
+               <td>{{cliente.documento}}</td>
+               <td>{{cliente.telefono}}</td>
+               <td>{{cliente.direccion}}</td>
+               <td>{{cliente.correo}}</td>
+               <td>{{cliente.fecha_vinculacion}}</td>
+               <td><i (click)="editar(cliente.id_cliente)" class="bi bi-pencil-square"></i><i (click)="eliminar(cliente.id_cliente)" class="bi bi-trash3-fill"></i></td>
+             </tr> 
+             
            </tbody>
          </table>
 
 
-   </div>
+ </div>

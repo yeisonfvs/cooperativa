@@ -1,30 +1,52 @@
 .botones{
-    width: 100%;
-    height: 70px;
+    
     text-align: center;
-}
-button{
-    width: 170px;
-    height:40px ;
-    border: solid 1px ;
-    border-radius: 10px;
-    margin: 20px;
-    background-color: #118b30;
-    color: aliceblue;
-}
-button:hover{
-    background-color:  #021d06;
-}
-
-.Buscar{
-    width: 200px;
-    height: 35px;
-    padding-left: 10px;
-    border: solid 1px;
-    border-radius: 10px;
-    outline-offset: 2px ;
-    outline: green  ;
-}
-h1{
-    font-size: 20px;
-}
+     width: 100%;
+     height: 70px;
+      
+    
+ }
+ button{
+   
+     width: 130px;
+     height:40px ;
+     border: solid 1px ;
+     border-radius: 10px;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     margin-right: 20px;
+     background-color: #118b30;
+     color: aliceblue;
+     text-decoration: none;
+ }
+ button:hover{
+     background-color: #021d06;
+     
+     
+ }
+ 
+ 
+ .tabla{
+     margin: 5px;
+ }
+ thead{
+     background-color: #a6f7b3;
+ }
+ .Buscar{
+     width: 200px;
+     height: 35px;
+     padding-left: 10px;
+     border: solid 1px;
+     border-radius: 10px;
+     outline-offset: 2px ;
+     outline: green  ;
+ 
+ }
+ i{
+     margin-right: 9px;
+     font-size: 20px;
+     border: none;
+ }
+ i:hover{
+     box-shadow: 0 0 5px rgb(19, 19, 121);
+ }

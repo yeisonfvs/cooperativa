@@ -1,45 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-
-interface Documento {
-  id?: number;
-  nombre: string;
-  tipo: string;
-  fechaRegistro: number;
-  ruta: string;
-  empleado: string;
-  cliente: string;
-
-}
-
-const DOCUMENTO: Documento[] = [
-  {
-    
-    nombre: 'Russia',
-    tipo: 'f/f3/Flag_of_Russia.svg',
-    fechaRegistro: 17075200,
-    ruta:'rutaprueba',
-    empleado: 'yeison',
-    cliente: 'samir',
-  },
-  {
-    nombre: 'France',
-    tipo: 'c/c3/Flag_of_France.svg',
-    fechaRegistro: 640679,
-    ruta: 'rutaprueba',
-    empleado: 'jose',
-    cliente:'pedro'
-  },
-  {
-    nombre: 'Germany',
-    tipo: 'b/ba/Flag_of_Germany.svg',
-    ruta: 'rutaprueba',
-    fechaRegistro: 357114,
-    empleado: 'maria',
-    cliente: 'laura'
-  },
- 
-];
+import { observable } from 'rxjs';
+import {DocumentosService} from '../../servicios/documentos.service';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-documentos',
@@ -48,21 +10,52 @@ const DOCUMENTO: Documento[] = [
 })
 export class DocumentosComponent implements OnInit {
 
-  page = 1;
-  pageSize = 4;
-  collectionSize = DOCUMENTO.length;
-  documentos = DOCUMENTO;
+    documentos:any;
 
-  constructor() {
-    this.refreshCountries();
-  }
+    constructor(private DocumentosService:DocumentosService, private router:Router) {}
+    //this.refreshCountries();
+    ngOnInit(): void{
+      this.listarDocumentos();
+     
+    }
 
-  ngOnInit(){}
+    listarDocumentos()
+   {
+    this.DocumentosService.getDocumentos().subscribe(
+      res=>{
+        this.documentos = res;
+        console.log(res)
+      },
+      err => console.log(err)
+      );
+    }
+   
+   editar(id:number){
+   this.router.navigate(['documentos/editar'+id])
+   }
 
-  refreshCountries() {
+   eliminar(id:number)
+   {
+    this.DocumentosService.deleteDocumento(id).subscribe(
+      res=>{
+        console.log('documento eliminado');
+        this.listarDocumentos();
+      },
+      err=>console.log(err)
+    );
+   }
+    
+  
+
+  
+
+
+
+
+  //refreshCountries() {
     // this.countries = COUNTRIES
     //   .map((country, i) => ({id: i + 1, ...country}))
     //   .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
-  }
+  //}
 
 }

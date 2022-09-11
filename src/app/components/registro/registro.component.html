@@ -1,0 +1,66 @@
+<div class="logo">
+  <img class="logo" src="assets/logo.png">
+</div>
+
+<hr class="barra">
+<div class="titulo">
+  <h1>Registro  </h1>
+
+</div>
+
+<div class="formulario">
+  <h2>Ingrese los datos solicitados</h2>
+   <form [formGroup]="formRegistro" (ngSubmit)="onSubmit(formRegistro.value)" method="post" >
+     
+         
+            <div class="bloquei">
+              <input formControlName="nombres" placeholder="Nobres" name="nombres" required="true" class="bloque1">
+
+              <input formControlName="apellidos" placeholder="Apellidos" name="apellidos" required="true" class="bloque1">
+
+             <select class="bloque1" formControlName="tipoIdentificacion">
+               <option  value="" selected="seleccione uno"  aria-required="true" >Tipo documento</option>
+               <option value="1">CC</option>
+               <option value="2">TI</option>
+               <option value="3">PAS</option>
+               <option value="4">CE</option>
+               <option value="5">RC</option>
+              </select>
+               <input formControlName="identificacion" type="number" placeholder="No.identificacion" name="identificacion" required="true" class="bloque1">
+
+                <input formControlName="direccion" type="text" placeholder="Direccion de residencia" name="direccion de residencia" required="true" class="bloque1">
+
+                <input formControlName="telefono" type="number" placeholder="Telefono" name="telefono" required="true" class="bloque1">
+              </div>
+         
+       
+      
+          <div class="bloqued ">  
+          <input formControlName="correo" type="email" placeholder="Correo electronico" required="true" class="tamano8">
+
+          
+
+          <input formControlName="nombreUsuario" type="text" placeholder="Nombre Usuario"  required="true" class="tamano7">
+          <input formControlName="contrasena" type="password" placeholder="contraseña" required="true" class="tamano9">
+          <input formControlName="confirmarContrasena" type="password" placeholder="Confirmacion" required="true" class="tamano9">
+         
+     
+            <p>Usa 8 o mas caracteres con una combinacion de letras, numeros y/o simbolos</p>
+
+               <div class="checkbox"> 
+                <input type="checkbox" >
+                <label>Mostrar contraseña</label>
+         
+              </div>
+            </div>
+        <button [disabled]="formRegistro.invalid" type="submit" class="boton" >Guardar</button>
+
+        <div>
+          <a routerLink="/login" class="txt1">
+              ¿Ya tienes cuenta? / Ingresar
+          </a>
+      </div>
+     
+      
+</form>
+</div>

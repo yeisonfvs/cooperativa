@@ -1,31 +1,33 @@
 <div class="botones">
-  <button><a target="marco-modulos" href="agregarCliente.html" style="text-decoration: none; color: aliceblue;">agregar</a></button>
+  <a class="btn btn-success" routerLink="/documentos/agregar" >agregar</a>
   <input class=" Buscar" type="search" placeholder="Buscar" aria-label="Buscar">
  </div>
 <div class="tabla">
-  <h1>lista Documentos</h1>
- <table class="table table-striped">
+   <caption>lista Documentos</caption>
+    <table class="table table-striped">
+ 
     <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">nombre</th>
+      <th scope="col">fecha</th>
+      <th scope="col">empleado</th>
       <th scope="col">tipo</th>
-      <th scope="col">fecha registro</th>
+      <th scope="col">nombre</th>
       <th scope="col">ruta</th>
-      <th scope="col">id empleado</th>
-      <th scope="col">id cliente</th>
-     
+      <th scope="col">cliente</th>
+      <th scope="col">Acciones</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let documento of documentos; index as i">
       <th scope="row">{{ i + 1 }}</th>
-      <td>{{ documento.nombre }}</td>
+      <td>{{ documento.fecha_registro }}</td>
+      <td>{{ documento.id_empleado }}</td>
       <td>{{ documento.tipo }}</td>
-      <td>{{ documento.fechaRegistro }}</td>
+      <td>{{ documento.nombre }}</td>
       <td>{{ documento.ruta }}</td>
-      <td>{{ documento.empleado }}</td>
-      <td>{{ documento.cliente }}</td>
+      <td>{{ documento.id_cliente }}</td>
+      <td><i matTooltip = "ver archivo" class="bi bi-eye-fill" ></i> <i matTooltip = "editar" routerLink="/documentos/editar/{{documento.id_archivo}}" class="bi bi-pencil-square"></i><i matTooltip = "eliminar archivo" (click)="eliminar(documento.id_archivo)" class="bi bi-trash3-fill"></i></td>
     </tr>
     </tbody>
   </table>

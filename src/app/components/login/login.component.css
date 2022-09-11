@@ -1,0 +1,79 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.linea {
+    height: 30px;
+    width: 100%;
+    size: 50px;
+   background-color: #118b30;
+
+}
+
+
+.contenedor {
+    margin: 50px auto;
+    height: 400px;
+    width: 430px;
+    align-content: center;
+   
+    
+}
+ .contenedor h1 {
+     font-family: Comic Sans MS,Arial,Verdana;
+     text-align: center;
+     color:  #07641f;
+     margin-bottom: 0;  
+ }
+
+.contenedor h2{
+    font-family: Comic Sans MS,Arial,Verdana;
+    text-align: center;
+    color: gray;  
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+
+}
+ .campos {
+     margin: 25px;
+ }
+
+ .campos input{
+     margin: 15px;
+     width: 301px;
+     height: 30px;
+     border-radius: 6px;
+     border: solid 2px;
+ }
+
+ .campos label {
+     font-family: Arial, Helvetica, sans-serif;
+     margin-left: 20px;
+ }
+  .boton { 
+      height: 35px;
+      width: 90px;
+      margin-left: 155px;
+      border-radius: 6px;
+      border: solid #07641f;
+      background-color: #07641f;
+      color: aliceblue;
+      font-size: 21px;
+      font-family:  Comic Sans MS,Arial,Verdana;
+     }
+
+     .boton:hover{
+         background-color: #3c8d50;
+         border: #3c8d50;
+     }
+
+     .enlaces {
+         text-align: center;
+        margin-top: -126px;
+        
+     }

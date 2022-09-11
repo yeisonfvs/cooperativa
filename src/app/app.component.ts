@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cooperativa';
+
+  accessLogin = false;
+
+  constructor(){
+    
+    this.accessLogin = localStorage.getItem('token') ? true : false;
+    console.log(this.accessLogin);
+  }
+  
 }

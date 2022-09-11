@@ -1,0 +1,27 @@
+
+ <div class="logo">
+    <img class="logo" src="assets/logo.png">
+</div>
+<hr class="linea">
+
+<div class="contenedor">
+   <h1>Inicio de seccion</h1>
+   <h2>Usuarios registrados</h2>
+   <div class="campos">
+        <form  [formGroup]="formLogin" (ngSubmit)="onSubmit(formLogin.value)" action="" method="post">
+       <label for="usuario" name="usuario" >Usuario:</label>
+       <input formControlName="nombreUsuario" type="text" name="usuario" required="true"><br>
+
+       <label  for="contraseña" >Contraseña:</label>
+       <input formControlName="contrasenia"  type="password" name="contraseña" required="true">
+   
+        <input type="submit" class="boton ">
+       </form> 
+   </div> 
+     
+</div>
+ <br>
+<div class="enlaces">
+    <a href="">¿Olvidaste tu contraseña?</a> <br/>
+    <a href="registro.html">Registrate</a>
+</div>

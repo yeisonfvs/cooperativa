@@ -5,17 +5,19 @@
    <form action="" class="form1" method="post">
        
        <div class="arriba">
-       <input type="text" placeholder="Nombre" name="Nombre" required="true" class="tamano1">
-       <input type="text" placeholder="Tipo" name="Tipo" required="true" class="tamano1">
-       <input type="date" placeholder="Fecha Registro" name="Fecha Registro" required="true" class="tamano1">
+       <input [(ngModel)]="documento.nombre" type="text" placeholder="Nombre" name="Nombre" required="true" class="tamano1">
+       <input  [(ngModel)]="documento.tipo"type="text" placeholder="Tipo" name="Tipo" required="true" class="tamano1">
+       <input [(ngModel)]="documento.fecha_registro"type="date" placeholder="Fecha Registro" name="Fecha Registro" required="true" class="tamano1">
        </div>
        <div class="abajo">
-         <input type="text" placeholder="Ruta" name="Ruta" required="true" class="tamano2">
-       <input type="text" placeholder="Cliente" name="Cliente" required="true" class="tamano2">
-       <input type="text" placeholder="Empleado" name="Emplaedo" required="true" class="tamano2">
+         <input [(ngModel)]="documento.ruta" type="text" placeholder="Ruta" name="Ruta" required="true" class="tamano2">
+       <input [(ngModel)]="documento.id_cliente" type="text" placeholder="Cliente" name="Cliente" required="true" class="tamano2">
+       <input [(ngModel)]="documento.id_empleado" type="text" placeholder="Empleado" name="Emplaedo" required="true" class="tamano2">
+       
        </div>
        <div class="boton">
-         <input type="submit" class="boton-guardar" value="Guardar">
+         <input (click)="agregar()" type="submit" class="boton-guardar" value="Guardar">
+         <input type="file" placeholder="subir archivo">
        </div>
         
            
